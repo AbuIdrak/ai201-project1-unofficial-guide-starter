@@ -1,7 +1,7 @@
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-N_RESULTS = 5
+N_RESULTS = 7
 
 _client = chromadb.PersistentClient(path="./chroma_db")
 _collection = _client.get_collection("unofficial_guide")
