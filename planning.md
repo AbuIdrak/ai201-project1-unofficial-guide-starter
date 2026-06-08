@@ -124,7 +124,8 @@ flowchart LR
      with my specified chunk size and overlap" is a plan. -->
 
 **Milestone 3 — Ingestion and chunking:**
-
+I'll give Claude my Documents section (list of 10 sources, all .txt files) and my Chunking Strategy section (400 chars, 50 overlap) and ask it to implement an ingestion script that loads the files, cleans out noise like HTML tags and deleted Reddit comments, and produces chunks matching my spec.
 **Milestone 4 — Embedding and retrieval:**
-
+I'll give Gemini my Retrieval Approach section and Architecture diagram and ask it to implement the embedding step using all-MiniLM-L6-v2 and store chunks in ChromaDB with source metadata. Then ask it to implement a retrieve() function that returns top-5 chunks with text, source, and distance score.
 **Milestone 5 — Generation and interface:**
+I'll give Claude my full planning.md and ask it to implement a generate_response() function using Groq's llama-3.3-70b that answers only from retrieved chunks and cites sources. Then ask it to build a Gradio interface that shows the answer and sources.
